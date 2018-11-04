@@ -1,6 +1,7 @@
 # GobyteDocker
-Dockerfiles for Building and Running Gobyte Containers for local regression tests
-Currently using stages to easily configure up-to-date images as needed
+Dockerfiles for Building and Running Gobyte Containers for local regression tests.  
+Currently build-flow is in stages to easily configure up-to-date images as needed.
+Can be done in one step, with Alpine lib removals during build process.
 
 
 ## Step One
