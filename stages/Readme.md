@@ -2,6 +2,8 @@
 * `sh build.sh`
 
 # Step By Step Build
+Complete step by step for those new to Docker.  This step by step build is convenient for updating
+the node configurations or the Gobyte codebase. Since Docker stores the builds as layers which can build upon one another, having various layers ready to build with goes fast once they are all in place.  Use `docker build --no-cache -f ...` to redo layer builds without using the layers being cached by the Docker Engine. 
 
 ## Step One
 
@@ -45,7 +47,9 @@
 * Tag:
   * gobyte-node
 * Cmd:
+  * `cp ../conf/gobyte-node.conf .`
   * `docker build -f gobyte-alpine-node.Dockerfile -t gobyte-node .`
+  * (optional) `rm gobyte-node.conf`
 
 ## Create MasterNode
 * Desc:
@@ -55,4 +59,6 @@
 * Tag:
   * gobyte-masternode
 * Cmd:
+  * `cp ../conf/gobyte-masternode.conf .`
   * `docker build -f gobyte-alpine-masternode.Dockerfile -t gobyte-masternode .`
+    * (optional) `rm gobyte-masternode.conf`
